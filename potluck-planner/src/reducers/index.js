@@ -1,0 +1,1 @@
+export { mockReducer } from './mockReducer';

@@ -1,8 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import './App.css';
 
-function App() {
+function App(props) {
+  console.log('props in App.js: ', props);
   return (
     <div className="App">
       <h1>Potluck Planner</h1>
@@ -10,4 +12,11 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    users: state.users,
+    events: state.events
+  }
+}
+
+export default connect(mapStateToProps, {})(App);
