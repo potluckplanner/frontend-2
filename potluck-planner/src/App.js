@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './components/Nav';
 import NavRouter from './components/NavRouter';
+import Form from './components/SignUp';
 
 import './App.css';
 

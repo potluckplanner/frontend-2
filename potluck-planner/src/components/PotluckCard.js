@@ -31,7 +31,7 @@ const items = [
       meta: 'Locatoin: 1234 Terry Brooks Dr',
     },
     {
-      header: 'Creator: Oscar wilde - Oct 7th',
+      header: 'Creator: Oscar wilde - Sept 7th',
       description: 'I\'m bringing: Ice Cream',
       meta: 'Location: 5678 Oscar wilde Rd',
     },
@@ -41,14 +41,29 @@ const items = [
       meta: 'Location: 5678 JK Rolling Rd',
     },
     {
-      header: 'Creator: Mark Wright - Oct 7th',
+      header: 'Creator: Mark Wright - Oct 27th',
       description: 'I\'m bringing: Salad',
       meta: 'Location: 2356 Mark Wright Blvd',
     },
     {
-      header: 'Creator: Cavan Scott - Oct 7th',
+      header: 'Creator: Cavan Scott - Nov 5th',
       description: 'I\'m bringing: Chips and dip',
       meta: 'Location: 7856 Cavan Scott Rd',
+    },
+    {
+      header: 'Creator: Anne Rice - Nov 7th',
+      description: 'I\'m bringing: Pie',
+      meta: 'Location: 5678 Anne Rice Rd',
+    },
+    {
+      header: 'Creator: Sir Arthur Connan Doyle - Nov 17th',
+      description: 'I\'m bringing: Salad',
+      meta: 'Location: 2356 Sir Arthur Connan Doyle Blvd',
+    },
+    {
+      header: 'Creator: Kara Cooney - Dec 7th',
+      description: 'I\'m bringing: Chips and dip',
+      meta: 'Location: 7856 Kara Cooney Rd',
     },
   ]
   
