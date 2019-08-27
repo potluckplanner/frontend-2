@@ -10,14 +10,14 @@ const Dashboard = props => {
 
   console.log("props in Dashboard: ", props);
 
-  const [events, setevents] = useState([]);
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
     const id = [props.match.params.id];
     axios
       .get(`https://pure-headland-63143.herokuapp.com/${id}`)
       .then(response => {
-        setevents(response.data.result);
+        setEvents(response.data.result);
         console.log(response.data.result);
       })
       .catch(error => {
@@ -29,9 +29,11 @@ const Dashboard = props => {
     <section className="dashboard">
       <Header />
       <MyDatePicker />
-      {events.map(event => {
-        return (<PotluckCard key={event.id} event={event} />);
-      })}
+      <div className="potluck-cards">
+        {props.events.map(event => {
+          return (<PotluckCard key={event.id} event={event} />);
+        })}
+      </div>
     </section>
   );
 }
