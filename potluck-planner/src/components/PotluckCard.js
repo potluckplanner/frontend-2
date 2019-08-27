@@ -7,15 +7,15 @@ export default function PotluckCard(props) {
   console.log(props);
   return (
      <Card>
-      <div class="ui orange card">
+      <div className="ui orange card">
       <Card.Content>
-        <Card.Header>event Name: { name }</Card.Header>
+        <Card.Header>Event Name: { name }</Card.Header>
         <Card.Meta>Organizer: { userId }</Card.Meta>
         <Card.Description>Description: { description }</Card.Description>
         <Card.Description>Location: { location }</Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Link to = {`/events/${props.event.id}`} class="ui red button">View Potluck</Link>
+        <Link to = {`/events/${props.event.id}`} className="ui red button">View Potluck</Link>
       </Card.Content>
       </div>
         </Card>

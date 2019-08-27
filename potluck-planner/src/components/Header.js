@@ -8,7 +8,7 @@ const Header = props => {
 
   return (
     <header className="ui header red header segment">
-      <Image class="ui mini image" src={require('../components/img/utensils-solid.png')} />
+      <Image className="ui mini image" src={require('../components/img/utensils-solid.png')} alt="Potluck Planner Logo" />
       <h1>My Potlucks</h1>
     </header>
   );
