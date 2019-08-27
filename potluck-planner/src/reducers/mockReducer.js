@@ -1,4 +1,4 @@
-import { mockState } from '../mock-data';
+import { mockState } from '../mock-data.js';
 
 export const mockReducer = (state = mockState, action) => {
     switch (action.type) {
