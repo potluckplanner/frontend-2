@@ -4,7 +4,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#ff935c, #dc5353, #a72461);
+  background: linear-gradient(#ffcc99, #993366);
+  height: 600px;
   margin: 0;
   padding: 0;
 }
@@ -18,6 +19,10 @@ code {
   margin: 0 auto;
   padding-bottom: 30px;
   font-family: 'Patua One', cursive;
+}
+
+.date-picker {
+  padding-bottom: 15px;
 }
 
 .card {

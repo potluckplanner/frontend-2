@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Header from './Header';
 import PotluckCard from './PotluckCard';
+import MyDatePicker from './DatePicker';
 
 const Dashboard = props => {
 
@@ -11,6 +12,7 @@ const Dashboard = props => {
   return (
     <section className="dashboard">
       <Header />
+      <MyDatePicker />
       <PotluckCard />
     </section>
   );
