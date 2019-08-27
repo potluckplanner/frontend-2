@@ -2,18 +2,18 @@ import React from 'react';
 import { Card } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-export default function PotluckCard({ potluck }) {
-  const { organizerId, name, description, location } = potluck;
+export default function PotluckCard({ event }) {
+  const { userId, name, description, location } = event;
   return (
      <Card>
       <Card.Content>
-        <Card.Meta>Organizer: { organizerId }</Card.Meta>
-        <Card.Header>Potluck Name: { name }</Card.Header>
+        <Card.Meta>Organizer: { userId }</Card.Meta>
+        <Card.Header>event Name: { name }</Card.Header>
         <Card.Description>Description: { description }</Card.Description>
       </Card.Content>
       <Card.Content extra>
         Location: { location }
-        <Link to = { `/potluck/${potluck.id}` }>View Potluck</Link>
+        <Link to = { `/potluck/${event.id}` }>View Potluck</Link>
       </Card.Content>
         </Card>
   );
