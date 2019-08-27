@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import DatePicker from 'react-date-picker';
  
 class MyDatePicker extends Component {
@@ -6,7 +6,7 @@ class MyDatePicker extends Component {
     date: new Date(),
   }
  
-  onChange = date => this.setState({date})
+  onChange = date => this.setState({ date })
  
   render() {
     return (

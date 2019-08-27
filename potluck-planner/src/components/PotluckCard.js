@@ -1,30 +1,25 @@
 import React from 'react';
-import {Card, Image} from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
-{/* export default function PotluckCard({potluck}) {
-  const {date, creator, location, items} = potluck;
+export default function PotluckCard({ potluck }) {
+  const { organizerId, name, description, location } = potluck;
   return (
      <Card>
       <Card.Content>
-        <Card.Meta>{potluck.date}</Card.Meta>
-        <Card.Header>Potluck Creator: {potluck.creator}</Card.Header>
-        <Card.Description>Location: {potluck.locaton}</Card.Description>
-        <Image src={potluck.image} wrapped ui={false} />
-        <Card.Header>What I'm Bringing:</Card.Header>
-        {items.map(item => (
-            <div key={item} className="pl-items">
-            {item}
-            </div>
-        ))} 
+        <Card.Meta>Organizer: { organizerId }</Card.Meta>
+        <Card.Header>Potluck Name: { name }</Card.Header>
+        <Card.Description>Description: { description }</Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <button type="submit">View Potluck</button>
+        Location: { location }
+        <Link to = { `/potluck/${potluck.id}` }>View Potluck</Link>
       </Card.Content>
         </Card>
   );
-}  */}
+} 
 
-const items = [
+{/* const items = [
     {
       header: 'Creator: Terry Brooks - Sept 2nd',
       description: 'I\'m bringing: Chips',
@@ -69,4 +64,4 @@ const items = [
   
   const PotluckCard = () => <Card.Group centered items={items} />
   
-  export default PotluckCard;
+export default PotluckCard; */}
