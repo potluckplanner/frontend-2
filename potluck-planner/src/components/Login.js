@@ -24,9 +24,9 @@ const Login = () => {
     return (
         <>
             <form onSubmit={submit}>
-                <input type="text" name='username' onChange={handleChanges} />
+                <input type="text" name='username' onChange={handleChanges} placeholder="username" />
                 <p>Lambda School</p>
-                <input type="password" name='password' onChange={handleChanges} />
+                <input type="password" name='password' onChange={handleChanges} placeholder="password" />
                 <p>{password}</p>
                 <button>Login</button>
             </form>
