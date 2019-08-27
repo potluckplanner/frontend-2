@@ -1,13 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Nav from './components/Nav';
+import NavRouter from './components/NavRouter';
+import Form from './components/SignUp';
+
 import './App.css';
 
 function App(props) {
   console.log('props in App.js: ', props);
   return (
     <div className="App">
-      <h1>Potluck Planner</h1>
+      <Nav />
+      <NavRouter />
     </div>
   );
 }
