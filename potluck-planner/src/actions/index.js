@@ -1,12 +1,23 @@
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
-export const GET_DATA = 'GET_DATA';
-export const FETCHING = 'FETCHING';
-export const ERROR = 'ERROR';
+export const HAVE_USERS = 'HAVE_USERS';
+export const HAVE_EVENTS = 'HAVE_EVENTS';
 
-export const getData = fields = dispatch => {
-    dispatch({ type: FETCHING });
+
+export const getUsers = _ => dispatch => {
+
     axiosWithAuth()
-        .get('https://api.some.api/routes/here')
-        .then(res => dispatch({  }))
+        .get('https://potluckplanner-be.herokuapp.com/users')
+        .then(res => dispatch({ type: HAVE_USERS, payload: res.data }))
+        .catch(err => console.error(err))
+
+}
+
+export const getEvents = _ => dispatch => {
+
+    axiosWithAuth()
+        .get('https://potluckplanner-be.herokuapp.com/events')
+        .then(res => dispatch({ type: HAVE_EVENTS, payload: res.data }))
+        .catch(err => console.error(err))
+
 }

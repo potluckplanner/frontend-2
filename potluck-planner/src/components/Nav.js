@@ -26,8 +26,6 @@ const createLabel = (iconName, labelText) => (
   
   const Nav = props => {
 
-    console.log("props in Nav.js: ", props);
-
     return (<Tab panes={panes} renderActiveOnly={false} />)
   };
 
