@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import PotluckPage from './PotluckPage';
 
 export default function PotluckCard(props) {
   const { userId, name, description, location } = props.event;
-  console.log(props);
+  console.log(`PotluckCard: `, props);
   return (
      <Card>
       <div className="ui orange card">
@@ -15,7 +16,8 @@ export default function PotluckCard(props) {
         <Card.Description>Location: { location }</Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Link to = {`/events/${props.event.id}`} className="ui red button">View Potluck</Link>
+        <Link to={`/events/${props.event.id}`} className="ui red button">View Potluck</Link>
+        <Route path = "/events/id" component={PotluckPage} />
       </Card.Content>
       </div>
         </Card>
