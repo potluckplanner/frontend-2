@@ -6,10 +6,10 @@ function PotluckPage( props ) {
   return (
     <div>
       <div className = "potluck-page">
-        <img src={require('./img/potluck-img.jpg')} alt = "Image by Brooke Lark" />
-        <h1>{event.name}</h1>
-        <h2>{event.description}</h2>
-        <h3>{event.location}</h3>
+        <img src={require('./img/potluck-img.jpg')} alt = "Potluck by Brooke Lark" />
+        <h1>Event Name: {event.name}</h1>
+        <h2>Description: {event.description}</h2>
+        <h3>Locatoin: {event.location}</h3>
       </div>
     </div>
   );

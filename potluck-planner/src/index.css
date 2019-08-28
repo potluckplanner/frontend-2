@@ -39,10 +39,16 @@ code {
 .potluck-page {
   background: linear-gradient(#ffcc99, #993366);
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   margin: 25px auto;
 }
 
 .potluck-page > img {
   border: 3px solid #a72461;
+  width: 80vw;
+  max-width: 900px;
+  max-height: 300px;
 }

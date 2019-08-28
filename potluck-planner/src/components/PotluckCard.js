@@ -16,8 +16,8 @@ export default function PotluckCard(props) {
         <Card.Description>Location: { location }</Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Link to={`/events/${props.event.id}`} className="ui red button">View Potluck</Link>
-        <Route path = "/events/id" component={PotluckPage} />
+        <Link to={`/events/${props.event.id}`} target="blank" className="ui red button">View Potluck</Link>
+        <Route path = "/events/:id" component={PotluckPage} />
       </Card.Content>
       </div>
         </Card>
