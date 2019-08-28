@@ -15,7 +15,7 @@ const Dashboard = props => {
   useEffect(() => {
     const id = [props.match.params.id];
     axios
-      .get(`https://pure-headland-63143.herokuapp.com/${id}`)
+      .get(`https://potluckplanner-be.herokuapp.com/${id}`)
       .then(response => {
         setEvents(response.data.result);
         console.log(response.data.result);

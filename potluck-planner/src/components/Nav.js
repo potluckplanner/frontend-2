@@ -16,7 +16,7 @@ const createLabel = (iconName, labelText) => (
     
     {
       menuItem: ( 
-        <Menu.Item key="home" href="https://vishalicious213.github.io/buildWeek1-Potluck-Planner/index.html" content={homeLabel} />
+        <Menu.Item key="home" href="https://vishalicious213.github.io/buildWeek1-Potluck-Planner/index.html" target="blank" content={homeLabel} />
       )
     },
     {
