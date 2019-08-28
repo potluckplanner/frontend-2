@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import Header from './Header';
 import PotluckCard from './PotluckCard';
 
+import { getUsers, getEvents } from '../actions';
+
 const Dashboard = props => {
 
   console.log("props in Dashboard: ", props);
+
+  useEffect(_ => (
+    props.getUsers(),
+    props.getEvents()
+  ), [])
 
   return (
     <section className="dashboard">
@@ -23,4 +30,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {})(Dashboard);
+export default connect(mapStateToProps, { getUsers, getEvents })(Dashboard);

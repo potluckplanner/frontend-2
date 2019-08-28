@@ -1,18 +1,23 @@
-import axios from 'axios';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-import Login from '../components/Login';
 
-export const LOGIN = 'LOGIN';
+export const HAVE_USERS = 'HAVE_USERS';
+export const HAVE_EVENTS = 'HAVE_EVENTS';
 
-export const GET_DATA = 'GET_DATA';
-export const FETCHING = 'FETCHING';
-export const ERROR = 'ERROR';
 
-export const login = obj => dispatch => {
-    console.log("obj in login(): ", obj);
+export const getUsers = _ => dispatch => {
 
-    axios
-        .post('https://potluckplanner-be.herokuapp.com/users/login', {...obj})
-        .then(res => dispatch({ type: Login, payload: res.data.token}))
-        .catch(err => console.error(err.response));
+    axiosWithAuth()
+        .get('https://potluckplanner-be.herokuapp.com/users')
+        .then(res => dispatch({ type: HAVE_USERS, payload: res.data }))
+        .catch(err => console.error(err))
+
+}
+
+export const getEvents = _ => dispatch => {
+
+    axiosWithAuth()
+        .get('https://potluckplanner-be.herokuapp.com/events')
+        .then(res => dispatch({ type: HAVE_EVENTS, payload: res.data }))
+        .catch(err => console.error(err))
+
 }
