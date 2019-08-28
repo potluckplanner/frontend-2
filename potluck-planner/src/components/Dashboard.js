@@ -8,8 +8,6 @@ import { getUsers, getEvents } from '../actions';
 
 const Dashboard = props => {
 
-  console.log("props in Dashboard: ", props);
-
   useEffect(_ => (
     props.getUsers(),
     props.getEvents()
