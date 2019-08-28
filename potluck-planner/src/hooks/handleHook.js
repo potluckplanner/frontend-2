@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
 export const useForm = cb => {
+
+    console.log("cb in useForm: ", cb);
+
    const [fields, setFields] = useState({})
    const submit = e => {
        e && e.preventDefault()

@@ -7,7 +7,7 @@ import NavRouter from './components/NavRouter';
 import './App.css';
 
 function App(props) {
-  console.log('props in App.js: ', props);
+  
   return (
     <div className="App">
       <Nav />

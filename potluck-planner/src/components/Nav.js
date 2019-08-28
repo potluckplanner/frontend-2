@@ -26,6 +26,17 @@ const createLabel = (iconName, labelText) => (
     },
   ];
   
-  const Nav = () => <Tab panes={panes} renderActiveOnly={false} />;
+
+  const Nav = props => {
+
+    return (<Tab panes={panes} renderActiveOnly={false} />)
+  };
+
+  const mapStateToProps = state => {
+    return {
+      users: state.users,
+      events: state.events
+    }
+  }
   
   export default Nav;

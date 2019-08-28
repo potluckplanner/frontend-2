@@ -1,1 +1,1 @@
-export { mockReducer } from './mockReducer';
+export { reducer } from './reducers';
