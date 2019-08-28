@@ -1,10 +1,15 @@
+html{
+  height: 100%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#ff935c, #dc5353, #a72461);
+  background: linear-gradient(#ffcc99, #993366);
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
 }
@@ -20,12 +25,30 @@ code {
   font-family: 'Patua One', cursive;
 }
 
-.card {
-  border: 1px solid #a72461;
-  background: #f9e090;
+.date-picker {
+  padding-bottom: 15px;
 }
 
-.card > button {
-  background: #ff935c;
-  border: 1px solid #a72461;
+.potluck-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.potluck-page {
+  background: linear-gradient(#ffcc99, #993366);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 25px auto;
+}
+
+.potluck-page > img {
+  border: 3px solid #a72461;
+  width: 80vw;
+  max-width: 900px;
+  max-height: 300px;
 }

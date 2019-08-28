@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const Form = (props) => {
-  const[member, setMember] = useState({username: "", email: "", password: ""});
+  const[member, setMember] = useState({ username: "", email: "", password: "" });
   
   const changeHandler = (e) => {
     console.log(e.target.value);
