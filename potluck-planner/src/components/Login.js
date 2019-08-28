@@ -28,10 +28,6 @@ const Login = () => {
                 <p>Ben</p>
                 <input type="password" name='password' onChange={handleChanges} placeholder="password" />
                 <p>{password}</p>
-                <input type="text" name='full_name' onChange={handleChanges} placeholder="full name" />
-                <p>Ben Rogers</p>
-                <input type="email" name='email' onChange={handleChanges} placeholder="email" />
-                <p>ben@gmail.com</p>
                 <button>Login</button>
             </form>
         </>
