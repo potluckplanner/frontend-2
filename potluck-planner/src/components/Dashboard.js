@@ -22,7 +22,7 @@ const Dashboard = props => {
   useEffect(() => {
     const id = [props.match.params.id];
     axios
-      .get(`https://potluckplanner-be.herokuapp.com/${id}`)
+      .get(`https://potluckplanner-be.herokuapp.com/events/${id}`)
       .then(response => {
         setEvents(response.data.result);
         console.log(response.data.result);
@@ -37,7 +37,7 @@ const Dashboard = props => {
       <Header />
       <MyDatePicker />
       <div className="potluck-cards">
-        {props.events.map(event => {
+        {events.map(event => {
           return (<PotluckCard key={event.id} event={event} />);
         })}
       </div>

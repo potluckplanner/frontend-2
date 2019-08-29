@@ -1,6 +1,6 @@
 import React from 'react';
-import {Tab, Menu, Icon} from 'semantic-ui-react';
-import {NavLink} from 'react-router-dom';
+import { Tab, Menu, Icon } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 const createLabel = (iconName, labelText) => (
     <span>
