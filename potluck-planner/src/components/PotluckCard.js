@@ -4,19 +4,19 @@ import { Link, Route } from 'react-router-dom';
 import PotluckPage from './PotluckPage';
 
 export default function PotluckCard(props) {
-  const { userId, name, description, location } = props.event;
+  const { organizer_id, event_name, date, time } = props.event;
   console.log(`PotluckCard: `, props);
   return (
      <Card>
       <div className="ui orange card">
       <Card.Content>
-        <Card.Header>Event Name: { name }</Card.Header>
-        <Card.Meta>Organizer: { userId }</Card.Meta>
-        <Card.Description>Description: { description }</Card.Description>
-        <Card.Description>Location: { location }</Card.Description>
+        <Card.Header>Event Name: { event_name }</Card.Header>
+        <Card.Meta>Organizer: { organizer_id }</Card.Meta>
+        <Card.Description>Date: { date }</Card.Description>
+        <Card.Description>Time: { time }</Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Link to={`/event/${props.event.id}`} target="blank" className="ui red button">View Potluck</Link>
+        <Link to={`/event/${props.event.event_id}`} target="blank" className="ui red button">View Potluck</Link>
         <Route path = "/event/:id" component={PotluckPage} />
       </Card.Content>
       </div>
@@ -24,7 +24,7 @@ export default function PotluckCard(props) {
   );
 } 
 
-// const items = [
+// const event = [
 //     {
 //       header: 'Creator: Terry Brooks - Sept 2nd',
 //       description: 'I\'m bringing: Chips',
@@ -67,6 +67,6 @@ export default function PotluckCard(props) {
 //     },
 //   ]
   
-//   const PotluckCard = () => <Card.Group centered items={items} />
+//   const PotluckCard = () => <Card.Group centered event={event} />
   
 // export default PotluckCard; 
