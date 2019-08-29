@@ -1,23 +1,32 @@
-import React, { Component } from 'react';
+import React, { useState, Component } from 'react';
 import DatePicker from 'react-date-picker';
+import { connect } from 'react-redux';
+
+import { useForm } from '../hooks/handleHook';
  
-class MyDatePicker extends Component {
-  state = {
-    date: new Date(),
-  }
+// class MyDatePicker extends Component
  
-  onChange = date => this.setState({ date })
+//   onChange = date => this.setState({ date })
  
-  render() {
-    return (
-      <div className="date-picker">
-        <DatePicker
-          onChange={this.onChange}
-          value={this.state.date}
-        />
-      </div>
-    );
-  }
+//   render() {
+
+//   }
+// }
+
+const MyDatePicker = () => {
+  const [date, setDate] = useState();
+
+  const { fields, submit, handleChanges } = useForm();
+
+  return (
+    <div className="date-picker">
+      <DatePicker
+        onChange={handleChanges}
+        value={date}
+      />
+    </div>
+  );
+
 }
 
-export default MyDatePicker;
+export default connect(null, {})(MyDatePicker);
