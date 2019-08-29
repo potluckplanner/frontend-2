@@ -20,7 +20,7 @@ const Dashboard = props => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    const id = [props.match.params.event_id];
+    const id = [props.match.params.id];
     axios
       .get(`https://potluckplanner-be.herokuapp.com/users/event/${id}`)
       .then(response => {
@@ -30,11 +30,7 @@ const Dashboard = props => {
       .catch(error => {
         console.log(error);
       })
-  },[props.match.params.event_id])
-
-  if (!events) {
-    return <div>Loading events information...</div>;
-  }
+  },[props.match.params.id])
 
   return (
     <section className="dashboard">
@@ -42,7 +38,7 @@ const Dashboard = props => {
       <MyDatePicker />
       <div className="potluck-cards">
         {events.map(event => {
-          return (<PotluckCard key={event.event_id} event={event} />);
+          return (<PotluckCard key={event.id} event={event} />);
         })}
       </div>
     </section>

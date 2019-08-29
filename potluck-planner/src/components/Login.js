@@ -28,7 +28,7 @@ const Login = () => {
                 <p>Ben</p>
                 <input type="password" name='password' onChange={handleChanges} placeholder="password" />
                 <p>{password}</p>
-                <button>Login</button>
+                <button type="submit">Login</button>
             </form>
         </>
     )

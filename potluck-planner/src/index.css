@@ -19,10 +19,26 @@ code {
     monospace;
 }
 
-.header {
+.ui.attached.tabular.menu >.active.item {
+  /* border: 2px solid #a72461; */
+  border-bottom: none;
+  /* background: linear-gradient(#ffcc99, #ff9966); */
+  background: linear-gradient(#fdffe3, #f9e090);
+}
+
+.ui.header {
   margin: 0 auto;
   padding-bottom: 30px;
   font-family: 'Patua One', cursive;
+  /* border: 3px solid #993366; */
+  border: 2px dashed silver;
+  /* background: #ffcc99; */
+  /* background: linear-gradient(#ffcc99, #ffcc99, #ff9966); */
+  background: linear-gradient(#f9e090, #f9e090, #fdffe3);
+}
+
+.ui.dashboard {
+  background-color: #ff9966;
 }
 
 .ui.header>.image:not(.icon), .ui.header>img {
@@ -35,8 +51,23 @@ h1:last-child {
   margin: 0;
 }
 
+.ui.page-view {
+  /* background: linear-gradient(#ffcc99, #993366); */
+ /* background: linear-gradient(#f4f4f4, #f9e090); */
+ background: linear-gradient(#f9e090, #fdffe3);
+}
+
 .date-picker {
-  padding-bottom: 15px;
+  padding: 15px;
+}
+
+.ui.card{
+  background: linear-gradient(#ff9966, #993366);
+  border: none;
+}
+
+.ui.card>:only-child {
+  border: none;
 }
 
 .potluck-cards {
@@ -44,6 +75,11 @@ h1:last-child {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: baseline;
+}
+
+.ui.medium.image {
+  margin: 10px auto;
+  border-radius: 10%;
 }
 
 .potluck-page {
@@ -57,7 +93,7 @@ h1:last-child {
 }
 
 .potluck-page > img {
-  border: 3px solid #a72461;
+  border: 5px solid #a72461;
   width: 80vw;
   max-width: 900px;
   max-height: 300px;

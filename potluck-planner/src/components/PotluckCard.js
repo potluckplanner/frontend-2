@@ -1,30 +1,34 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
-import { Link, Route } from 'react-router-dom';
-import PotluckPage from './PotluckPage';
+import { Card, Image } from 'semantic-ui-react';
+// import { Link, Route } from 'react-router-dom';
+// import PotluckPage from './PotluckPage';
 
 export default function PotluckCard(props) {
-  const { organizer_id, event_name, date, time } = props.event;
+  const { organizerId, name, description, location, date, food, guests } = props.event;
   console.log(`PotluckCard: `, props);
   return (
-     <Card>
-      <div className="ui orange card">
+    <Card>
+      <div className="ui card">
       <Card.Content>
-        <Card.Header>Event Name: { event_name }</Card.Header>
-        <Card.Meta>Organizer: { organizer_id }</Card.Meta>
-        <Card.Description>Date: { date }</Card.Description>
-        <Card.Description>Time: { time }</Card.Description>
+        <Card.Header>Event Name: { name }</Card.Header>
+        <Card.Meta>Organizer: { organizerId }</Card.Meta>
+        <Card.Description>{ date }</Card.Description>
+        <Card.Description>Location: { location }</Card.Description>
+        <Card.Description>Description: { description }</Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <Link to={`/event/${props.event.event_id}`} target="blank" className="ui red button">View Potluck</Link>
-        <Route path = "/event/:id" component={PotluckPage} />
+        {/* <Link to={`/events/${props.event.id}`} target="blank" className="ui red button">View Potluck</Link>
+        <Route path = "/events/:id" component={PotluckPage} /> */}
+        <Card.Description><strong>You are bringing: </strong>Chips { food }</Card.Description>
+        <Card.Description><strong>Guest List:</strong> Doug, Ben, Michael { guests }</Card.Description>
+        <Image src={require('./img/food2.jpg')} alt = "Food by Katie Smith on Unsplash" size="medium" />
       </Card.Content>
       </div>
-        </Card>
+    </Card>
   );
 } 
 
-// const event = [
+// const events = [
 //     {
 //       header: 'Creator: Terry Brooks - Sept 2nd',
 //       description: 'I\'m bringing: Chips',
@@ -67,6 +71,6 @@ export default function PotluckCard(props) {
 //     },
 //   ]
   
-//   const PotluckCard = () => <Card.Group centered event={event} />
+//   const PotluckCard = () => <Card.Group centered events={events} />
   
 // export default PotluckCard; 
