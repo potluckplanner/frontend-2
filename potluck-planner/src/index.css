@@ -25,6 +25,16 @@ code {
   font-family: 'Patua One', cursive;
 }
 
+.ui.header>.image:not(.icon), .ui.header>img {
+  width: 330px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+h1:last-child {
+  margin: 0;
+}
+
 .date-picker {
   padding-bottom: 15px;
 }

@@ -32,6 +32,10 @@ const Dashboard = props => {
       })
   },[props.match.params.event_id])
 
+  if (!events) {
+    return <div>Loading events information...</div>;
+  }
+
   return (
     <section className="dashboard">
       <Header />
